@@ -1,7 +1,17 @@
-diff -Nur flux-sched-0.27.0/t/Makefile.in flux-sched-0.27.0.patched/t/Makefile.in
---- flux-sched-0.27.0/t/Makefile.in	2023-04-01 00:50:41.000000000 +0000
-+++ flux-sched-0.27.0.patched/t/Makefile.in	2023-04-23 23:06:09.693246186 +0000
-@@ -559,7 +559,6 @@
+From d37f88023db1d9b308a8294981520dc690ca034a Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Mon, 24 Apr 2023 10:42:02 -0600
+Subject: [PATCH] Update Makefile.am
+
+---
+ t/Makefile.am | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/t/Makefile.am b/t/Makefile.am
+index 190bc90b4..9b504603d 100644
+--- a/t/Makefile.am
++++ b/t/Makefile.am
+@@ -31,7 +31,6 @@ TESTS = \
      t1007-recovery-full.t \
      t1009-recovery-multiqueue.t \
      t1010-sync-modules.t \
