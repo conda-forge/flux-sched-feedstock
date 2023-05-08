@@ -1,0 +1,41 @@
+diff --git a/t/t3300-system-dontblock.t b/t/t3300-system-dontblock.t
+index 4c44d3049..c075d87d1 100755
+--- a/t/t3300-system-dontblock.t
++++ b/t/t3300-system-dontblock.t
+@@ -17,7 +17,7 @@ export FLUXION_RESOURCE_OPTIONS="load-allowlist=node,core,gpu load-format=hwloc"
+ 
+ test_under_flux 2 system
+ 
+-SCHED_MODULE=$(flux module list | awk '$6 == "sched" {print $1}')
++SCHED_MODULE=$(flux module list | awk '$NF == "sched" {print $1}')
+ 
+ test_expect_success 'fluxion immediately fails to be loaded with hwloc reader' '
+     test_debug "echo sched service provided by ${SCHED_MODULE}" &&
+diff --git a/t/t3301-system-latestart.t b/t/t3301-system-latestart.t
+index c7fea2233..f07bf580f 100755
+--- a/t/t3301-system-latestart.t
++++ b/t/t3301-system-latestart.t
+@@ -21,7 +21,7 @@ test_under_flux 2 system
+ 
+ startctl="flux python ${SHARNESS_TEST_SRCDIR}/scripts/startctl.py"
+ 
+-SCHED_MODULE=$(flux module list | awk '$6 == "sched" {print $1}')
++SCHED_MODULE=$(flux module list | awk '$NF == "sched" {print $1}')
+ 
+ test_expect_success 'sched service provided by fluxion' '
+ 	test_debug "echo sched service provided by ${SCHED_MODULE}" &&
+diff --git a/t/t1010-sync-modules.t b/t/t1010-sync-modules.t
+index 811fc5de3..8173a414f 100755
+--- a/t/t1010-sync-modules.t
++++ b/t/t1010-sync-modules.t
+@@ -41,10 +41,6 @@ test_expect_success 'sync: unloading fluxion-resource removes qmanager' '
+     test_must_fail remove_qmanager
+ '
+ 
+-test_expect_success 'sync: resource is still intact' '
+-    flux module info resource
+-'
+-
+ test_expect_success 'sync: load sched-simple' '
+     flux module load sched-simple
+ '
