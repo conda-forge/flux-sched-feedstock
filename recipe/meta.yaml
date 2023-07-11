@@ -10,7 +10,6 @@ source:
   sha256: 9431c671bed5d76fd95b4a4a7f36224d4bf76f416a2a1a5c4908f3ca790d434d
   patches:
     - disable-dynstate-change-test.patch
-    - flux_0_50_00.patch
 
 build:
   number: 0
