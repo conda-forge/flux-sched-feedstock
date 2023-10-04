@@ -12,7 +12,7 @@ source:
     - disable-dynstate-change-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - python
     - flux-core
     - libhwloc
-    - boost-cpp
+    - libboost-devel
     - libedit
     - yaml-cpp
     - pyyaml
@@ -36,7 +36,6 @@ requirements:
   run:
     - python
     - flux-core
-    - boost-cpp
     - libuuid
     - jansson
     - czmq
