@@ -1,11 +1,21 @@
-diff -Nur flux-sched-0.27.0/t/Makefile.in flux-sched-0.27.0.patched/t/Makefile.in
---- flux-sched-0.27.0/t/Makefile.in	2023-04-01 00:50:41.000000000 +0000
-+++ flux-sched-0.27.0.patched/t/Makefile.in	2023-04-23 23:06:09.693246186 +0000
-@@ -559,7 +559,6 @@
+From 127eadbfc17f1ecc0622ada01b1c2afef3328d62 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Wed, 4 Oct 2023 07:02:56 +0200
+Subject: [PATCH] Update Makefile.am
+
+---
+ t/Makefile.am | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/t/Makefile.am b/t/Makefile.am
+index ebad00670..4a3a6b786 100644
+--- a/t/Makefile.am
++++ b/t/Makefile.am
+@@ -31,7 +31,6 @@ TESTS = \
      t1007-recovery-full.t \
      t1009-recovery-multiqueue.t \
      t1010-sync-modules.t \
 -    t1011-dynstate-change.t \
      t1012-find-status.t \
-     t1013-exclusion.t \
      t1013-qmanager-priority.t \
+     t1014-annotation.t \
