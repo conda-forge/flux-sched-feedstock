@@ -1,5 +1,5 @@
 {% set name = "flux-sched" %}
-{% set version = "0.28.0" %}
+{% set version = "0.31.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
-  sha256: 9431c671bed5d76fd95b4a4a7f36224d4bf76f416a2a1a5c4908f3ca790d434d
+  sha256: 4440156b7f2d43e3db2cbfa0dbc43671074c397525f6b97e3748c3d96a035cdb
   patches:
     - disable-dynstate-change-test.patch
 
