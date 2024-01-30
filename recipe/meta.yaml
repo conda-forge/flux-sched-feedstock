@@ -24,7 +24,7 @@ requirements:
     - python
     - flux-core
     - libhwloc
-    - boost-cpp
+    - libboost-devel
     - libedit
     - yaml-cpp
     - pyyaml
@@ -35,7 +35,6 @@ requirements:
   run:
     - python
     - flux-core
-    - boost-cpp
     - libuuid
     - jansson
     - czmq
