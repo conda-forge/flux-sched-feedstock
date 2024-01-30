@@ -13,7 +13,7 @@ docker_image:
 libboost_devel:
 - '1.82'
 libhwloc:
-- 2.9.1
+- 2.9.3
 pin_run_as_build:
   python:
     min_pin: x.x
