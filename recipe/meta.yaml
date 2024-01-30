@@ -10,7 +10,7 @@ source:
   sha256: 4440156b7f2d43e3db2cbfa0dbc43671074c397525f6b97e3748c3d96a035cdb
   patches:
     - disable-test-t6001.patch
-    - disable-test-t1011.patch  # [py<=39]
+    - disable-test-t1011.patch
 
 build:
   number: 0
