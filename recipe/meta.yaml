@@ -22,7 +22,7 @@ requirements:
     - jq
   host:
     - python
-    - flux-core =0.58.0
+    - flux-core
     - libhwloc
     - libboost-devel
     - libedit
@@ -34,7 +34,7 @@ requirements:
     - ply
   run:
     - python
-    - flux-core =0.58.0
+    - flux-core
     - libuuid
     - jansson
     - czmq
