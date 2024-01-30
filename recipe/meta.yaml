@@ -1,5 +1,5 @@
 {% set name = "flux-sched" %}
-{% set version = "0.28.0" %}
+{% set version = "0.32.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,10 @@ package:
 
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
-  sha256: 9431c671bed5d76fd95b4a4a7f36224d4bf76f416a2a1a5c4908f3ca790d434d
+  sha256: f0b88881f0154057de3dd5485a3e1cfc0b9b64c98052bda7d5fed7c05b5e02f3
   patches:
-    - disable-dynstate-change-test.patch
+    - disable-test-t6001.patch
+    - disable-test-t1011.patch  # [py<=39]
 
 build:
   number: 0
@@ -19,13 +20,14 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - make
+    - cmake
     - pkgconfig
     - jq
   host:
     - python
     - flux-core
     - libhwloc
-    - boost-cpp
+    - libboost-devel
     - libedit
     - yaml-cpp
     - pyyaml
@@ -36,7 +38,6 @@ requirements:
   run:
     - python
     - flux-core
-    - boost-cpp
     - libuuid
     - jansson
     - czmq

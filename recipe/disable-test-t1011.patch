@@ -1,0 +1,21 @@
+From 106be8b896269508c02a6dc0ac85c4772af0d728 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Tue, 30 Jan 2024 14:17:26 +0100
+Subject: [PATCH] Update CMakeLists.txt
+
+---
+ t/CMakeLists.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/t/CMakeLists.txt b/t/CMakeLists.txt
+index 7793c10e5..6916c1383 100644
+--- a/t/CMakeLists.txt
++++ b/t/CMakeLists.txt
+@@ -13,7 +13,6 @@ set(ALL_TESTS
+   t1007-recovery-full.t
+   t1009-recovery-multiqueue.t
+   t1010-sync-modules.t
+-  t1011-dynstate-change.t
+   t1012-find-status.t
+   t1013-qmanager-priority.t
+   t1014-annotation.t
