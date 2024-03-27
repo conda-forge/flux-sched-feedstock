@@ -13,12 +13,13 @@ source:
     - disable-test-t1011.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make
     - cmake
     - pkgconfig
