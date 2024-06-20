@@ -1,5 +1,5 @@
 {% set name = "flux-sched" %}
-{% set version = "0.33.1" %}
+{% set version = "0.35.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
-  sha256: d0a1e504226d69fa8a247e9090d94ccc5e5f5fb028aab805f9cd95379bd8b1b3
+  sha256: 38fde51464f4e34ecbd1e4fbbf00267f96b639db5987257a7ad07f811e2f09d2
   patches:
     - disable-test-t6001.patch
     - disable-test-t1011.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
 
 requirements:
