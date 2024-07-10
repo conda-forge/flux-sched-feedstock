@@ -5,7 +5,10 @@ cmake ${CMAKE_ARGS} .
 
 make V=1
 
-export FLUX_TESTS_LOGFILE=t
-make check
+# Do not test on Arch
+if [[ -z "${CONDA_BUILD_CROSS_COMPILATION}" ]]; then
+  export FLUX_TESTS_LOGFILE=t
+  make check
+fi
 
 make install
