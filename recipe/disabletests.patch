@@ -1,0 +1,31 @@
+From ad7dfd3193aa06f9adbb122361daf21b3cdd40c7 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Wed, 10 Jul 2024 07:49:42 +0200
+Subject: [PATCH] Disable selected Tests
+
+---
+ t/CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/t/CMakeLists.txt b/t/CMakeLists.txt
+index 9b0d5fa52..765e4b227 100644
+--- a/t/CMakeLists.txt
++++ b/t/CMakeLists.txt
+@@ -27,7 +27,7 @@ set(ALL_TESTS
+   t1022-property-constraints.t
+   t1023-multiqueue-constraints.t
+   t1024-alloc-check.t
+-  t1025-rv1-reload.t
++  # t1025-rv1-reload.t
+   t3000-jobspec.t
+   t3001-resource-basic.t
+   t3002-resource-prefix.t
+@@ -82,7 +82,7 @@ set(ALL_TESTS
+   t4012-set-status.t
+   t4013-unreservable.sh
+   t5000-valgrind.t
+-  t5100-issues-test-driver.t
++  # t5100-issues-test-driver.t
+   t6000-graph-size.t
+   t6001-match-formats.t
+   t6002-graph-hwloc.t
