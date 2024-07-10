@@ -10,6 +10,7 @@ source:
   sha256: c20814eae65b6eb9f2c919dbcc216dd4b87f038a341cf99510cca88d43631c41
   patches:
     - disabletests.patch
+    - disable-test-t1016.patch   # [build_platform != target_platform]
 
 build:
   number: 0
