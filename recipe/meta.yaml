@@ -13,7 +13,7 @@ source:
     - disable-test-t1016.patch   # [build_platform != target_platform]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
