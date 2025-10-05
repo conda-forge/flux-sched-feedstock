@@ -9,3 +9,5 @@ export FLUX_TESTS_LOGFILE=t
 make check
 
 make install
+
+ls $PREFIX/lib
