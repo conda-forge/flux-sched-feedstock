@@ -1,5 +1,5 @@
 {% set name = "flux-sched" %}
-{% set version = "0.42.0" %}
+{% set version = "0.42.1" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
     - disable-test-t1016.patch   # [build_platform != target_platform]
 
 build:
-  number: 4
+  number: 0
   skip: true  # [not linux]
 
 requirements:
