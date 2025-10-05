@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
   sha256: 80194e5c23e7ef5f4bf6cb1c9f63f949f979e9f58c7976e5453c31f244d3fd6a
+  patches:
+    - install-path.patch
 
 build:
   number: 0
