@@ -1,0 +1,22 @@
+From 9d3db5e1c2fe195d1cfd3598cee8e64b8a6842e0 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
+Date: Sun, 5 Oct 2025 17:02:54 +0200
+Subject: [PATCH] remove lib64
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0998bb7..232c14e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -75,7 +75,7 @@ set( CMAKE_BUILD_RPATH
+ # the RPATH to be used when installing, but only if it's not a system directory
+ list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/lib" isSystemDir)
+ if("${isSystemDir}" STREQUAL "-1")
+-  set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib64:${CMAKE_INSTALL_PREFIX}/lib")
++  set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+ endif("${isSystemDir}" STREQUAL "-1")
+ 
+ # Setting the include directory for the application to find config.h
