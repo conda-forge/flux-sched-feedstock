@@ -26,7 +26,7 @@ requirements:
     - jq
   host:
     - python
-    - flux-core
+    - flux-core <0.70
     - libhwloc
     - libboost-devel
     - libedit
