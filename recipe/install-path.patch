@@ -1,22 +1,33 @@
-From 9d3db5e1c2fe195d1cfd3598cee8e64b8a6842e0 Mon Sep 17 00:00:00 2001
+From 9f1ce275b34ed7006721ddb791d7b7ecfb9f0734 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
-Date: Sun, 5 Oct 2025 17:02:54 +0200
-Subject: [PATCH] remove lib64
+Date: Sun, 5 Oct 2025 19:10:21 +0200
+Subject: [PATCH] fix intall path
 
 ---
- CMakeLists.txt | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ CMakeLists.txt | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 0998bb7..232c14e 100644
+index f8b630d..a358960 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -75,7 +75,7 @@ set( CMAKE_BUILD_RPATH
+@@ -69,14 +69,14 @@ configure_file(config.h.in config.h)
+ 
+ include( GNUInstallDirs ) # convenience names for gnu-style directories
+ # RPATH setup
+-set(CMAKE_INSTALL_RPATH_USE_LINK_PATH ON)
++# set(CMAKE_INSTALL_RPATH_USE_LINK_PATH ON)
+ set( CMAKE_BUILD_RPATH
+   ${CMAKE_BINARY_DIR}/resource:${CMAKE_BINARY_DIR}/src/common/libtap )
  # the RPATH to be used when installing, but only if it's not a system directory
- list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/lib" isSystemDir)
- if("${isSystemDir}" STREQUAL "-1")
+-list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/lib" isSystemDir)
+-if("${isSystemDir}" STREQUAL "-1")
 -  set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib64:${CMAKE_INSTALL_PREFIX}/lib")
-+  set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
- endif("${isSystemDir}" STREQUAL "-1")
+-endif("${isSystemDir}" STREQUAL "-1")
++# ist(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/lib" isSystemDir)
++# if("${isSystemDir}" STREQUAL "-1")
++set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
++# endif("${isSystemDir}" STREQUAL "-1")
  
  # Setting the include directory for the application to find config.h
+ include_directories( ${CMAKE_BINARY_DIR} )
