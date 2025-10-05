@@ -7,10 +7,7 @@ package:
 
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
-  sha256: 0cb3efbd490256b28df580bb14f8e89c02084a9126e0b1754d6334a99ecfa969
-  patches:
-    - disabletests.patch
-    - disable-test-t1016.patch   # [build_platform != target_platform]
+  sha256: 117a2c9cd01a4fef372a546c53ea9b4d5fe2b9490b33c0816fcac556675eda0b
 
 build:
   number: 0
