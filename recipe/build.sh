@@ -4,6 +4,6 @@ export CXXFLAGS="${CXXFLAGS} -std=c++14 -Wno-maybe-uninitialized -I${PREFIX}/inc
 cmake -B build --preset default ${CMAKE_ARGS}
 cmake --build build
 ctest --test-dir build
-cmake --build build -t install --prefix ${PREFIX}
+cmake --build build -t install
 ls $PREFIX/lib/flux
 ls $PREFIX/lib
