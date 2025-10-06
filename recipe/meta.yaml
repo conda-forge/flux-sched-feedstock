@@ -21,7 +21,6 @@ requirements:
     - {{ stdlib("c") }}
     - make
     - cmake
-    - ninja
     - pkgconfig
     - jq
     - ninja
