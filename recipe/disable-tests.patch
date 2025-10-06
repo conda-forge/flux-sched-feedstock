@@ -1,14 +1,14 @@
-From 2f217b805e21aa720c58080cba32f5e90fc78ee3 Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
-Date: Sun, 5 Oct 2025 16:47:40 +0200
-Subject: [PATCH] disable tests
+From 0596075817e860c843ffbf187952bd1a182ffa86 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <janssen@mpie.de>
+Date: Mon, 6 Oct 2025 13:38:34 +0200
+Subject: [PATCH] Try again
 
 ---
  t/CMakeLists.txt | 4 ----
  1 file changed, 4 deletions(-)
 
 diff --git a/t/CMakeLists.txt b/t/CMakeLists.txt
-index 82368ac..c5bdb7e 100644
+index 82368ac..f22b0ab 100644
 --- a/t/CMakeLists.txt
 +++ b/t/CMakeLists.txt
 @@ -12,7 +12,6 @@ set(ALL_TESTS
@@ -19,14 +19,14 @@ index 82368ac..c5bdb7e 100644
    t1011-dynstate-change.t
    t1012-find-status.t
    t1013-qmanager-priority.t
-@@ -28,7 +27,6 @@ set(ALL_TESTS
+@@ -27,7 +26,6 @@ set(ALL_TESTS
+   t1022-property-constraints.t
    t1023-multiqueue-constraints.t
    t1024-alloc-check.t
-   t1025-rv1-reload.t
--  t1026-rv1-partial-release.t
+-  t1025-rv1-reload.t
+   t1026-rv1-partial-release.t
    t1027-rv1-partial-release-brokerless-resources.t
    t3000-jobspec.t
-   t3001-resource-basic.t
 @@ -67,9 +65,7 @@ set(ALL_TESTS
    t3034-resource-pconstraints.t
    t3035-resource-remove.t
