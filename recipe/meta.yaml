@@ -27,7 +27,7 @@ requirements:
     - ninja
   host:
     - python
-    - flux-core <0.70
+    - flux-core
     - libhwloc
     - libboost-devel
     - libedit
