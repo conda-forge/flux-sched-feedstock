@@ -24,6 +24,7 @@ requirements:
     - cmake
     - pkgconfig
     - jq
+    - ninja
   host:
     - python
     - flux-core <0.70
