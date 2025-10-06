@@ -24,9 +24,10 @@ requirements:
     - ninja
     - pkgconfig
     - jq
+    - ninja
   host:
     - python
-    - flux-core
+    - flux-core <0.70
     - libhwloc
     - libboost-devel
     - libedit
