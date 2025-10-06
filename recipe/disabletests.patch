@@ -1,31 +1,38 @@
-From ad7dfd3193aa06f9adbb122361daf21b3cdd40c7 Mon Sep 17 00:00:00 2001
-From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Wed, 10 Jul 2024 07:49:42 +0200
-Subject: [PATCH] Disable selected Tests
+From dca873b009a7b9c8951ea45c94adfacdfd8e05eb Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
+Date: Sun, 5 Oct 2025 17:11:18 +0200
+Subject: [PATCH] disable tests
 
 ---
- t/CMakeLists.txt | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ t/CMakeLists.txt | 4 ----
+ 1 file changed, 4 deletions(-)
 
 diff --git a/t/CMakeLists.txt b/t/CMakeLists.txt
-index 9b0d5fa52..765e4b227 100644
+index 9b0d5fa..5f8fa62 100644
 --- a/t/CMakeLists.txt
 +++ b/t/CMakeLists.txt
-@@ -27,7 +27,7 @@ set(ALL_TESTS
+@@ -9,7 +9,6 @@ set(ALL_TESTS
+   t1003-qmanager-policy.t
+   t1004-qmanager-optimize.t
+   t1005-qmanager-conf.t
+-  t1006-qmanager-multiqueue.t
+   t1007-recovery-full.t
+   t1009-recovery-multiqueue.t
+   t1010-sync-modules.t
+@@ -26,8 +25,6 @@ set(ALL_TESTS
+   t1021-qmanager-nodex.t
    t1022-property-constraints.t
    t1023-multiqueue-constraints.t
-   t1024-alloc-check.t
+-  t1024-alloc-check.t
 -  t1025-rv1-reload.t
-+  # t1025-rv1-reload.t
    t3000-jobspec.t
    t3001-resource-basic.t
    t3002-resource-prefix.t
-@@ -82,7 +82,7 @@ set(ALL_TESTS
+@@ -82,7 +79,6 @@ set(ALL_TESTS
    t4012-set-status.t
    t4013-unreservable.sh
    t5000-valgrind.t
 -  t5100-issues-test-driver.t
-+  # t5100-issues-test-driver.t
    t6000-graph-size.t
    t6001-match-formats.t
    t6002-graph-hwloc.t

@@ -13,7 +13,7 @@ source:
     - disable-test-t1016.patch   # [build_platform != target_platform]
 
 build:
-  number: 3
+  number: 4
   skip: true  # [not linux]
 
 requirements:
@@ -24,9 +24,10 @@ requirements:
     - cmake
     - pkgconfig
     - jq
+    - ninja
   host:
     - python
-    - flux-core
+    - flux-core <0.70
     - libhwloc
     - libboost-devel
     - libedit
