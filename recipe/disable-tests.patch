@@ -1,6 +1,6 @@
-From 76a245c811c0f10cea80a9f8d3a7a6708eec1860 Mon Sep 17 00:00:00 2001
+From 049ba457efaa13746a621f35281b29f2e9e9bf94 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <janssen@mpie.de>
-Date: Mon, 6 Oct 2025 13:49:46 +0200
+Date: Mon, 6 Oct 2025 14:19:44 +0200
 Subject: [PATCH] disable tests
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] disable tests
  1 file changed, 5 deletions(-)
 
 diff --git a/t/CMakeLists.txt b/t/CMakeLists.txt
-index 82368ac..36218be 100644
+index 14661dc..934d8da 100644
 --- a/t/CMakeLists.txt
 +++ b/t/CMakeLists.txt
 @@ -12,7 +12,6 @@ set(ALL_TESTS
@@ -28,10 +28,10 @@ index 82368ac..36218be 100644
    t1027-rv1-partial-release-brokerless-resources.t
    t3000-jobspec.t
    t3001-resource-basic.t
-@@ -67,9 +64,7 @@ set(ALL_TESTS
-   t3034-resource-pconstraints.t
+@@ -68,9 +65,7 @@ set(ALL_TESTS
    t3035-resource-remove.t
    t3036-rq2.t
+   t3037-resource-custom-policy.t
 -  t3300-system-dontblock.t
    t3301-system-latestart.t
 -  t4000-match-params.t
