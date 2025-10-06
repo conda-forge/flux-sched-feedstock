@@ -3,8 +3,8 @@ export LDFLAGS="${LDFLAGS} -lboost_system -lboost_graph -lboost_filesystem -lboo
 export CXXFLAGS="${CXXFLAGS} -std=c++14 -Wno-maybe-uninitialized -I${PREFIX}/include -I${PREFIX}/include/boost"
 cmake -B build --preset default ${CMAKE_ARGS}
 cmake --build build
-# ctest --test-dir build
-cmake --build build --target install --debug-output
+ctest --test-dir build
+cmake --build build --target install
 
 # Manual installation
 cp ./lib/libfluxion-data.so.0.47.0 ${PREFIX}/lib
