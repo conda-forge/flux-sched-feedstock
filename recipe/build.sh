@@ -7,6 +7,8 @@ cmake --build build
 cmake --build build --target install
 
 # Manual installation
+ls
+ls build
 mkdir -p ${PREFIX}/lib
 mkdir -p ${PREFIX}/lib/modules
 cp ./build/lib/libfluxion-data.so.0.47.0 ${PREFIX}/lib
