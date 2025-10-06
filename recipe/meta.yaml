@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
   sha256: 117a2c9cd01a4fef372a546c53ea9b4d5fe2b9490b33c0816fcac556675eda0b
+  patches:
+    - disable-t1025-rv1-reload.patch
 
 build:
   number: 0
@@ -21,6 +23,7 @@ requirements:
     - cmake
     - pkgconfig
     - jq
+    - ninja
   host:
     - python
     - flux-core
