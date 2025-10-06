@@ -7,6 +7,4 @@ ctest --test-dir build
 cmake --build build --target install
 
 # Manual installation
-cp ./lib/libfluxion-data.so.0.47.0 ${PREFIX}/lib
-cp ./lib/libfluxion-data.so.0.47 ${PREFIX}/lib
-cp ./lib/libsched-fluxion-resource-module.so ${PREFIX}/lib
+cp ./lib/* ${PREFIX}/lib
