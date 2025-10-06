@@ -1,11 +1,18 @@
 #!/bin/bash
 export LDFLAGS="${LDFLAGS} -lboost_system -lboost_graph -lboost_filesystem -lboost_regex"
 export CXXFLAGS="${CXXFLAGS} -std=c++14 -Wno-maybe-uninitialized -I${PREFIX}/include -I${PREFIX}/include/boost"
-cmake ${CMAKE_ARGS} .
 
-make V=1
+# cmake build
+cmake -B build --preset default ${CMAKE_ARGS}
+cmake --build build
 
-export FLUX_TESTS_LOGFILE=t
-make check
+# Do not test on Arch
+if [[ -z "${CONDA_BUILD_CROSS_COMPILATION}" ]]; then
+  ctest --test-dir build
+fi
 
-make install
+# cmake installation
+cmake --build build --target install
+
+# manual installation
+cp ./lib/* ${PREFIX}/lib
