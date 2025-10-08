@@ -1,5 +1,5 @@
 {% set name = "flux-sched" %}
-{% set version = "0.47.0" %}
+{% set version = "0.48.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v{{ version }}/flux-sched-{{ version }}.tar.gz
-  sha256: 80194e5c23e7ef5f4bf6cb1c9f63f949f979e9f58c7976e5453c31f244d3fd6a
+  sha256: 8f8de89e445303e07b27912d4044862a8594d46b68d20dbb28b1e20bef198efe
   patches:
     - disable-t1025-rv1-reload.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not linux]
 
 requirements:
