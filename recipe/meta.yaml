@@ -29,6 +29,7 @@ requirements:
     - flux-core
     - libhwloc
     - libboost-devel
+    - libxml2-devel
     - libedit
     - yaml-cpp
     - pyyaml
