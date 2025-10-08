@@ -12,7 +12,7 @@ source:
     - disable-t1025-rv1-reload.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -29,6 +29,7 @@ requirements:
     - flux-core
     - libhwloc
     - libboost-devel
+    - libxml2-devel
     - libedit
     - yaml-cpp
     - pyyaml
