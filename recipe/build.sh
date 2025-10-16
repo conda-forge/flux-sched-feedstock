@@ -16,3 +16,4 @@ cmake --build build --target install
 
 # manual installation
 cp ./lib/* ${PREFIX}/lib
+cp ./build/resource/modules/*.so ${PREFIX}/lib/flux/modulues
