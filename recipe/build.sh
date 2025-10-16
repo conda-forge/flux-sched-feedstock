@@ -16,5 +16,5 @@ cmake --build build --target install
 
 # manual installation
 cp ./lib/* ${PREFIX}/lib
-mkdir -p ${PREFIX}/lib/flux/modules
+cp ./build/qmanager/modules/*.so ${PREFIX}/lib/flux/modules
 cp ./build/resource/modules/*.so ${PREFIX}/lib/flux/modules
