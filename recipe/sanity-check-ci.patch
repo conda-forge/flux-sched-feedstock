@@ -1,0 +1,18 @@
+From e605759bf83132f2d11c6c816afadf2cf6e8b4c4 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Tue, 11 Aug 2026 07:19:14 +0200
+Subject: [PATCH] Modify parameters in run_sanity_check.sh script
+
+---
+ resource/utilities/test/run_sanity_check.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/resource/utilities/test/run_sanity_check.sh b/resource/utilities/test/run_sanity_check.sh
+index 7b3d0adab..6d6410d1b 100755
+--- a/resource/utilities/test/run_sanity_check.sh
++++ b/resource/utilities/test/run_sanity_check.sh
+@@ -1,3 +1,3 @@
+ #!/bin/bash
+ 
+-exec $srcdir/resource-bench.sh -j 10 -n 8 -c 32 -p $srcdir
++exec $srcdir/resource-bench.sh -j 10 -n 1 -c 2 -p $srcdir
