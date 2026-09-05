@@ -3,7 +3,7 @@ About flux-sched-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flux-sched-feedstock/blob/main/LICENSE.txt)
 
-Home: https://flux-framework.org
+Home: https://flux-framework.org/
 
 Package license: LGPL-3.0-or-later
 
@@ -18,7 +18,6 @@ High Performance Computing (HPC). Fluxion combines graph-based
 resource modeling with efficient temporal plan management schemes to
 schedule a wide range of HPC resources (e.g., compute, storage, power
 etc) in a highly scalable, customizable and effective fashion.
-
 
 Current build status
 ====================
