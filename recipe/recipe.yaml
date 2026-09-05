@@ -1,0 +1,74 @@
+schema_version: 1
+
+context:
+  name: flux-sched
+  version: "0.54.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/flux-framework/flux-sched/releases/download/v${{ version }}/flux-sched-${{ version }}.tar.gz
+  sha256: de8edcc3b3cb637939bd0fe7b25870fae2bcb0326629e2e3ad4efcb9da77b96a
+  patches:
+    - disable-t1025-rv1-reload.patch
+    - disable-reapi-test.patch
+    - sanity-check-ci.patch
+
+build:
+  number: 1
+  skip: not linux
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+    - make
+    - cmake
+    - pkgconfig
+    - jq
+    - ninja
+  host:
+    - python
+    - flux-core
+    - libhwloc
+    - libboost-devel
+    - libxml2-devel
+    - libedit
+    - yaml-cpp
+    - pyyaml
+    - jsonschema
+    - lua-luaposix
+    - cffi
+    - ply
+  run:
+    - python
+    - flux-core
+    - libuuid
+    - jansson
+    - czmq
+
+tests:
+  - script:
+      - flux --help
+      - flux start exit
+
+about:
+  summary: Fluxion Graph-based Scheduler
+  description: |
+    Welcome to Fluxion, an advanced job scheduling software tool for
+    High Performance Computing (HPC). Fluxion combines graph-based
+    resource modeling with efficient temporal plan management schemes to
+    schedule a wide range of HPC resources (e.g., compute, storage, power
+    etc) in a highly scalable, customizable and effective fashion.
+  license: LGPL-3.0-or-later
+  license_file: LICENSE
+  homepage: https://flux-framework.org
+  repository: https://github.com/flux-framework/flux-sched
+  documentation: https://flux-framework.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - grondo
+    - jan-janssen
