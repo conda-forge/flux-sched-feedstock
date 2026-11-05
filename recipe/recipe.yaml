@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flux-sched
-  version: "0.56.0"
+  version: "0.57.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/flux-framework/flux-sched/releases/download/v${{ version }}/flux-sched-${{ version }}.tar.gz
-  sha256: c6f7fb322fb0f27399f4f7ae190fdbccaffd101b92002ace45f0c6da39d89c18
+  sha256: d2f91e108554200f51e8972c4cf100efb27289a0ec55ee6f21cab1df48daa647
   patches:
     - disable-t1025-rv1-reload.patch
     - disable-reapi-test.patch
